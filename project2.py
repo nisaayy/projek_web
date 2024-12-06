@@ -1,13 +1,6 @@
 print("===========Selamat Datang di Booking Online Hotel Jaya=============")
 pembeli = input("Nama Pembeli : ")
 
-daerah_cabang = {
-    1: "Puwokerto",
-    2: "Purbalingga",
-    3: "Jakarta",
-    4: "Bandung",
-    5: "Yogyakarta"
-}
 
 # Definisikan jenis kamar dan harga per cabang
 jenis_room = {
