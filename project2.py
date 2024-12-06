@@ -122,4 +122,6 @@ kembali = tunai - total
 print("jumlah uang              : " , tunai)
 print("kembalian                : " , kembali)
 print("terimakasih sudah berkunjung, semoga harimu menyenangkan")
- bhhjjjjjjjjjj
+
+
+bobobbpnj
