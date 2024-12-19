@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Pricelist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='harga.css') }}">
+</head>
+<body>
+    <h1>Selamat Datang Di Hotel Jaya Sukses</h1>
+    <h2>Daftar Harga Kamar Hotel Jaya Sukses</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Cabang</th>
+                <th>Standard</th>
+                <th>Deluxe</th>
+                <th>Suite</th>
+                <th>Presidential</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for daerah_id, daerah_name in daerah.items() %}
+            <tr>
+                <td>{{ daerah_name }}</td>
+                {% for harga in harga[daerah_id] %}
+                <td>IDR {{ harga|int|format }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/sewa" class="btn-pesan">Pesan Sekarang</a>
+</body>
+</html>

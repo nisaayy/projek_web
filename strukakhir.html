@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='strukakhir.css') }}">
+    <title>Struk Penyewaan Kamar Hotel Jaya Sukses</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Struk Penyewaan Kamar Hotel Jaya Sukses</h1>
+        <table class="table">
+            <tr>
+                <td>Nama</td>
+                <td>{{ name }}</td>
+            </tr>
+            <tr>
+                <td>Cabang</td>
+                <td>{{ daerah }}</td>
+            </tr>
+            <tr>
+                <td>Tipe Kamar</td>
+                <td>{{ kamar }}</td>
+            </tr>
+            <tr>
+                <td>Harga per Malam</td>
+                <td>RP. {{ room_price|int|format }}</td>
+            </tr>
+            <tr>
+                <td>Jumlah Malam</td>
+                <td>{{ nights }}</td>
+            </tr>
+            <tr>
+                <td>Total Harga</td>
+                <td>RP. {{ total_harga|int|format }}</td>
+            </tr>
+            <tr>
+                <td>Diskon</td>
+                <td>IDR {{ diskon|int|format }}</td>
+            </tr>
+            <tr>
+                <td>Harga Akhir</td>
+                <td>RP. {{ harga_akhir|int|format }}</td>
+            </tr>
+            <tr>
+                <td>Uang Tunai</td>
+                <td>RP. {{ pembayaran|int|format }}</td>
+            </tr>
+            <tr class="highlight">
+                <td><strong>Kembalian</strong></td>
+                <td><strong>RP. {{ change|int|format }}</strong></td>
+            </tr>
+        </table>
+        <a href="/">Kembali ke Loby</a>
+    </div>
+</body>
+</html>

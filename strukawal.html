@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='strukawal.css') }}">
+    <title>Struk Pembayaran Penyewaan</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Struk Penyewaan Kamar</h1>
+        <p>Nama: {{ name }}</p>
+        <p>Cabang: {{ daerah }}</p>
+        <p>Tipe Kamar: {{ kamar }}</p>
+        <p>Harga per Malam: RP. {{ room_price|int|format }}</p>
+        <p>Jumlah Malam: {{ nights }}</p>
+        <p>Total Harga: RP. {{ total_harga|int|format }}</p>
+        <p>Diskon: RP. {{ diskon|int|format }}</p>
+        <h2>Harga Akhir: RP. {{ harga_akhir|int|format }}</h2>
+
+        <form method="POST">
+            <label>Jumlah Uang Tunai:</label>
+            <input type="number" name="pembayaran" min="{{ harga_akhir }}" required>
+            <input type="hidden" name="name" value="{{ name }}">
+            <input type="hidden" name="daerah" value="{{ request.form.get('daerah') }}">
+            <input type="hidden" name="tipe_kamar" value="{{ request.form.get('tipe_kamar') }}">
+            <input type="hidden" name="nights" value="{{ nights }}">
+            <button type="submit">Bayar</button>
+        </form>
+    </div>
+</body>
+</html>

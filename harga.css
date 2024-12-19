@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #296080;
+    color: white;
+}
+
+td {
+    background-color: #f2f2f2;
+}
+
+/* Gaya untuk tombol Pesan Sekarang */
+.btn-pesan {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #007bff; /* Warna biru */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efek hover */
+.btn-pesan:hover {
+    background-color: #401245; /* Warna biru lebih gelap */
+    transform: scale(1.05); /* Efek pembesaran */
+}
+
+/* Efek saat tombol ditekan */
+.btn-pesan:active {
+    background-color: #003d80; /* Warna lebih gelap */
+    transform: scale(1); /* Kembali ke ukuran awal */
+}
